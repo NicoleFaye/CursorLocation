@@ -25,8 +25,8 @@ namespace CursorLocation
         }
         public void UpdateCoords()
         {
-            xValue.Text = Cursor.Position.Y.ToString();
-            yValue.Text = Cursor.Position.X.ToString();
+            yValue.Text = Cursor.Position.Y.ToString();
+            xValue.Text = Cursor.Position.X.ToString();
         }
         private void CoordTimer_Tick(object sender, EventArgs e)
         {
