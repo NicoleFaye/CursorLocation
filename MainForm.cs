@@ -39,7 +39,7 @@ namespace CursorLocation
         public static ushort XCoordinatesToRatio(int inputX ) {
             int minX= SystemInformation.VirtualScreen.X; //the leftmost coord possible for x
 
-            int inputXModified = inputX;// + minX;
+            int inputXModified = inputX;
                 inputXModified += -1*minX;
 
             int screenWidth = SystemInformation.VirtualScreen.Width;
