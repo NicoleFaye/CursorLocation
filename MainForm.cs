@@ -43,11 +43,6 @@ namespace CursorLocation
                 inputXModified += -1*minX;
 
             int screenWidth = SystemInformation.VirtualScreen.Width;
-            /*
-            int screenWidth2 = Screen.PrimaryScreen.Bounds.Width;
-            int test = SystemInformation.VirtualScreen.X;
-            int test2 = SystemInformation.VirtualScreen.Y;
-            */
             ushort newX = 0;
             if (inputX > minX+screenWidth ||  inputX < minX )
             {
