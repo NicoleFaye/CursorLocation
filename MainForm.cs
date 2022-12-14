@@ -29,28 +29,12 @@ namespace CursorLocation
         {
             yValue.Text = Cursor.Position.Y.ToString();
             xValue.Text = Cursor.Position.X.ToString();
-            PrimaryScreenXValue.Text = XCoordinatesToRatio(Int32.Parse(Cursor.Position.X.ToString())).ToString();
-            PrimaryScreenYValue.Text = YCoordinatesToRatio(Int32.Parse(Cursor.Position.Y.ToString())).ToString();
+            AbsoluteXValue.Text = XCoordinatesToRatio(Int32.Parse(Cursor.Position.X.ToString())).ToString();
+            AbsoluteYValue.Text = YCoordinatesToRatio(Int32.Parse(Cursor.Position.Y.ToString())).ToString();
         }
         private void CoordTimer_Tick(object sender, EventArgs e)
         {
             xValue.Invoke(new labelChanger(UpdateCoords));
-        }
-        public static void moveMouseToCoords(int inputX, int inputY, InputSimulator input)
-        {
-            int screenWidth = Screen.PrimaryScreen.Bounds.Width;
-            int screenHeight = Screen.PrimaryScreen.Bounds.Height;
-            ushort newX = 0;
-            ushort newY = 0;
-            if (inputX > screenWidth || inputY > screenWidth || inputX < 0 || inputY < 0)
-            {
-                throw new Exception("Invalid input, method only works on the primary display");
-            }
-            newX = (ushort)(((double)inputX) * (((double)ushort.MaxValue) / ((double)(screenWidth - 1))));
-            newY = (ushort)(((double)inputY) * (((double)ushort.MaxValue) / ((double)(screenHeight - 1))));
-
-            input.Mouse.MoveMouseTo(newX, newY);
-
         }
         public static ushort XCoordinatesToRatio(int inputX ) {
             int minX= SystemInformation.VirtualScreen.X; //the leftmost coord possible for x

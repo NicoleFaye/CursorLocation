@@ -33,17 +33,17 @@ namespace CursorLocation
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.xLabel = new System.Windows.Forms.Label();
+            this.PixelXLabel = new System.Windows.Forms.Label();
             this.xValue = new System.Windows.Forms.Label();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.PrimaryScreenXValue = new System.Windows.Forms.Label();
+            this.AbsoluteXValue = new System.Windows.Forms.Label();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.yLabel = new System.Windows.Forms.Label();
+            this.PixelYLabel = new System.Windows.Forms.Label();
             this.yValue = new System.Windows.Forms.Label();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PrimaryScreenYValue = new System.Windows.Forms.Label();
+            this.AbsoluteYLabel = new System.Windows.Forms.Label();
+            this.AbsoluteYValue = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -81,35 +81,34 @@ namespace CursorLocation
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.xLabel);
+            this.flowLayoutPanel2.Controls.Add(this.PixelXLabel);
             this.flowLayoutPanel2.Controls.Add(this.xValue);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(182, 48);
             this.flowLayoutPanel2.TabIndex = 7;
             // 
-            // xLabel
+            // PixelXLabel
             // 
-            this.xLabel.AutoSize = true;
-            this.xLabel.Location = new System.Drawing.Point(3, 0);
-            this.xLabel.Name = "xLabel";
-            this.xLabel.Size = new System.Drawing.Size(24, 20);
-            this.xLabel.TabIndex = 7;
-            this.xLabel.Text = "X:";
+            this.PixelXLabel.AutoSize = true;
+            this.PixelXLabel.Location = new System.Drawing.Point(3, 0);
+            this.PixelXLabel.Name = "PixelXLabel";
+            this.PixelXLabel.Size = new System.Drawing.Size(56, 20);
+            this.PixelXLabel.TabIndex = 7;
+            this.PixelXLabel.Text = "PixelX:";
             // 
             // xValue
             // 
             this.xValue.AutoSize = true;
-            this.xValue.Location = new System.Drawing.Point(33, 0);
+            this.xValue.Location = new System.Drawing.Point(65, 0);
             this.xValue.Name = "xValue";
-            this.xValue.Size = new System.Drawing.Size(51, 20);
+            this.xValue.Size = new System.Drawing.Size(0, 20);
             this.xValue.TabIndex = 0;
-            this.xValue.Text = "label1";
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label1);
-            this.flowLayoutPanel3.Controls.Add(this.PrimaryScreenXValue);
+            this.flowLayoutPanel3.Controls.Add(this.AbsoluteXValue);
             this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 57);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(182, 49);
@@ -124,69 +123,66 @@ namespace CursorLocation
             this.label1.TabIndex = 6;
             this.label1.Text = "AbsoluteX:";
             // 
-            // PrimaryScreenXValue
+            // AbsoluteXValue
             // 
-            this.PrimaryScreenXValue.AutoSize = true;
-            this.PrimaryScreenXValue.Location = new System.Drawing.Point(96, 0);
-            this.PrimaryScreenXValue.Name = "PrimaryScreenXValue";
-            this.PrimaryScreenXValue.Size = new System.Drawing.Size(51, 20);
-            this.PrimaryScreenXValue.TabIndex = 4;
-            this.PrimaryScreenXValue.Text = "label1";
-            this.PrimaryScreenXValue.Click += new System.EventHandler(this.label1_Click);
+            this.AbsoluteXValue.AutoSize = true;
+            this.AbsoluteXValue.Location = new System.Drawing.Point(96, 0);
+            this.AbsoluteXValue.Name = "AbsoluteXValue";
+            this.AbsoluteXValue.Size = new System.Drawing.Size(0, 20);
+            this.AbsoluteXValue.TabIndex = 4;
+            this.AbsoluteXValue.Click += new System.EventHandler(this.label1_Click);
             // 
             // flowLayoutPanel4
             // 
-            this.flowLayoutPanel4.Controls.Add(this.yLabel);
+            this.flowLayoutPanel4.Controls.Add(this.PixelYLabel);
             this.flowLayoutPanel4.Controls.Add(this.yValue);
             this.flowLayoutPanel4.Location = new System.Drawing.Point(191, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(182, 48);
             this.flowLayoutPanel4.TabIndex = 9;
             // 
-            // yLabel
+            // PixelYLabel
             // 
-            this.yLabel.AutoSize = true;
-            this.yLabel.Location = new System.Drawing.Point(3, 0);
-            this.yLabel.Name = "yLabel";
-            this.yLabel.Size = new System.Drawing.Size(24, 20);
-            this.yLabel.TabIndex = 3;
-            this.yLabel.Text = "Y:";
+            this.PixelYLabel.AutoSize = true;
+            this.PixelYLabel.Location = new System.Drawing.Point(3, 0);
+            this.PixelYLabel.Name = "PixelYLabel";
+            this.PixelYLabel.Size = new System.Drawing.Size(56, 20);
+            this.PixelYLabel.TabIndex = 3;
+            this.PixelYLabel.Text = "PixelY:";
             // 
             // yValue
             // 
             this.yValue.AutoSize = true;
-            this.yValue.Location = new System.Drawing.Point(33, 0);
+            this.yValue.Location = new System.Drawing.Point(65, 0);
             this.yValue.Name = "yValue";
-            this.yValue.Size = new System.Drawing.Size(51, 20);
+            this.yValue.Size = new System.Drawing.Size(0, 20);
             this.yValue.TabIndex = 1;
-            this.yValue.Text = "label1";
             // 
             // flowLayoutPanel5
             // 
-            this.flowLayoutPanel5.Controls.Add(this.label2);
-            this.flowLayoutPanel5.Controls.Add(this.PrimaryScreenYValue);
+            this.flowLayoutPanel5.Controls.Add(this.AbsoluteYLabel);
+            this.flowLayoutPanel5.Controls.Add(this.AbsoluteYValue);
             this.flowLayoutPanel5.Location = new System.Drawing.Point(191, 57);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(182, 49);
             this.flowLayoutPanel5.TabIndex = 10;
             // 
-            // label2
+            // AbsoluteYLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "AbsoluteY:";
+            this.AbsoluteYLabel.AutoSize = true;
+            this.AbsoluteYLabel.Location = new System.Drawing.Point(3, 0);
+            this.AbsoluteYLabel.Name = "AbsoluteYLabel";
+            this.AbsoluteYLabel.Size = new System.Drawing.Size(87, 20);
+            this.AbsoluteYLabel.TabIndex = 4;
+            this.AbsoluteYLabel.Text = "AbsoluteY:";
             // 
-            // PrimaryScreenYValue
+            // AbsoluteYValue
             // 
-            this.PrimaryScreenYValue.AutoSize = true;
-            this.PrimaryScreenYValue.Location = new System.Drawing.Point(96, 0);
-            this.PrimaryScreenYValue.Name = "PrimaryScreenYValue";
-            this.PrimaryScreenYValue.Size = new System.Drawing.Size(51, 20);
-            this.PrimaryScreenYValue.TabIndex = 5;
-            this.PrimaryScreenYValue.Text = "label1";
+            this.AbsoluteYValue.AutoSize = true;
+            this.AbsoluteYValue.Location = new System.Drawing.Point(96, 0);
+            this.AbsoluteYValue.Name = "AbsoluteYValue";
+            this.AbsoluteYValue.Size = new System.Drawing.Size(0, 20);
+            this.AbsoluteYValue.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -217,17 +213,17 @@ namespace CursorLocation
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label xValue;
         private System.Windows.Forms.Label yValue;
-        private System.Windows.Forms.Label yLabel;
-        private System.Windows.Forms.Label PrimaryScreenXValue;
+        private System.Windows.Forms.Label PixelYLabel;
+        private System.Windows.Forms.Label AbsoluteXValue;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label xLabel;
+        private System.Windows.Forms.Label PixelXLabel;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label PrimaryScreenYValue;
+        private System.Windows.Forms.Label AbsoluteYLabel;
+        private System.Windows.Forms.Label AbsoluteYValue;
     }
 }
 
