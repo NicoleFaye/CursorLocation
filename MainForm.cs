@@ -47,7 +47,7 @@ namespace CursorLocation
             if (inputX > minX+screenWidth ||  inputX < minX )
             {
                 return 0;
-                throw new Exception("Invalid input, method only works on the primary display");
+                throw new Exception("Invalid input");
             }
             newX = (ushort)(((double)inputXModified) * (((double)ushort.MaxValue) / ((double)(screenWidth-1 ))));
             return newX;
@@ -61,7 +61,7 @@ namespace CursorLocation
             if ( inputY > minY+screenHeight||  inputY < minY)
             {
                 return 0;
-                throw new Exception("Invalid input, method only works on the primary display");
+                throw new Exception("Invalid input");
             }
             newY = (ushort)(((double)inputYModified) * (((double)ushort.MaxValue) / ((double)(screenHeight - 1))));
             return newY;
