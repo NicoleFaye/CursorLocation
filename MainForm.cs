@@ -29,8 +29,8 @@ namespace CursorLocation
         {
             yValue.Text = Cursor.Position.Y.ToString();
             xValue.Text = Cursor.Position.X.ToString();
-            AbsoluteXValue.Text = XCoordinatesToRatio(Int32.Parse(Cursor.Position.X.ToString())).ToString();
-            AbsoluteYValue.Text = YCoordinatesToRatio(Int32.Parse(Cursor.Position.Y.ToString())).ToString();
+            AbsoluteXValue.Text = XCoordinatesToRatio(Cursor.Position.X).ToString();
+            AbsoluteYValue.Text = YCoordinatesToRatio(Cursor.Position.Y).ToString();
         }
         private void CoordTimer_Tick(object sender, EventArgs e)
         {
